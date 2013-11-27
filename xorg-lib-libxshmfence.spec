@@ -1,25 +1,35 @@
 Summary:	X Shared Memory Fence library
 Summary(pl.UTF-8):	Biblioteka X Shared Memory Fence
 Name:		xorg-lib-libxshmfence
-Version:	1.0
+Version:	1.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxshmfence-%{version}.tar.bz2
-# Source0-md5:	b4437ce302bd6c3f4abda3d9330ddcf9
+# Source0-md5:	2dd10448c1166e71a176206a8dfabe6d
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-util-util-macros >= 1.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X Shared Memory Fence library.
+X Shared Memory Fence library - shared memory "SyncFence"
+synchronization primitive.
+
+This library offers a CPU-based synchronization primitive compatible
+with the X SyncFence objects that can be shared between processes
+using file descriptor passing.
 
 %description -l pl.UTF-8
-Biblioteka X Shared Memory Fence.
+Biblioteka X Shared Memory Fence to implementacja synchronizacji
+pamięci dzielonej "SyncFence.
+
+Biblioteka oferuje synchronizację dla procesora zgodną z obiektami X
+SyncFence, które można współdzieloć między procesami przy użyciu
+przekazywania deskryptorów plików.
 
 %package devel
 Summary:	Header files for libxshmfence library
@@ -85,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc ChangeLog README
 %attr(755,root,root) %{_libdir}/libxshmfence.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxshmfence.so.1
 
