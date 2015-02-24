@@ -2,7 +2,7 @@ Summary:	X Shared Memory Fence library
 Summary(pl.UTF-8):	Biblioteka X Shared Memory Fence
 Name:		xorg-lib-libxshmfence
 Version:	1.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxshmfence-%{version}.tar.bz2
