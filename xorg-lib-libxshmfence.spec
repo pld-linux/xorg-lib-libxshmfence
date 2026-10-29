@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,6 +39,7 @@ Summary:	Header files for libxshmfence library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libxshmfence
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-proto-xproto-devel
 
 %description devel
 xshmfence library.
